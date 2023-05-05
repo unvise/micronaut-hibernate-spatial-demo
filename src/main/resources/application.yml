@@ -1,0 +1,28 @@
+micronaut:
+  application:
+    name: micronautHibernateSpatialDemo
+datasources:
+  default:
+    driver-class-name: org.postgresql.Driver
+    username: admin
+    password: admin
+    url: jdbc:postgresql://localhost:5422/stores_db
+#    db-type: postgres
+#    dialect: POSTGRES
+netty:
+  default:
+    allocator:
+      max-order: 3
+
+jpa:
+  default:
+    properties:
+      hibernate:
+        hbm2ddl:
+          auto: none
+
+flyway:
+  datasources:
+    default:
+      enabled: true
+      default-schema: stores
