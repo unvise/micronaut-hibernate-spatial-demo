@@ -1,7 +1,7 @@
 plugins {
-    id("com.github.johnrengelman.shadow") version "7.1.2"
-    id("io.micronaut.application") version "3.7.9"
-    id("io.micronaut.test-resources") version "3.7.9"
+    id("com.github.johnrengelman.shadow") version "8.1.1"
+    id("io.micronaut.application") version "4.0.0-M3"
+    id("io.micronaut.test-resources") version "4.0.0-M3"
 }
 
 version = "0.1"
@@ -16,7 +16,7 @@ dependencies {
     annotationProcessor("io.micronaut.data:micronaut-data-processor")
     implementation("io.micronaut.sql:micronaut-jdbc-hikari")
     implementation("io.micronaut.data:micronaut-data-hibernate-jpa")
-    implementation("org.hibernate.orm:hibernate-spatial:6.1.7.Final")
+    implementation("org.hibernate.orm:hibernate-spatial:6.2.4.Final")
 
     // db
     runtimeOnly("org.postgresql:postgresql")
@@ -45,6 +45,8 @@ dependencies {
     compileOnly("org.projectlombok:lombok")
     annotationProcessor("org.projectlombok:lombok")
     annotationProcessor("org.projectlombok:lombok-mapstruct-binding:0.2.0")
+
+    runtimeOnly("org.yaml:snakeyaml")
 }
 
 application {
